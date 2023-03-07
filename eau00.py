@@ -8,10 +8,8 @@ def validate_combinations():
             for k in range(10):
                 if i <= j <= k and len(set(str(i) + str(j) + str(k))) == 3:
                     valid_combinations = (str(i) + str(j) + str(k))
-                    print(valid_combinations)
+                    print(valid_combinations, end=",")
+    print(("\n"), end="")
 
 # Call function to print valid combinations
 validate_combinations()
-
-
-
