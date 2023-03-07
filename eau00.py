@@ -1,8 +1,17 @@
-all_numbers = []
+# Empty list to store valid combinations
+valid_combinations = []
 
-for first_number in range(0, 10):
-    for second_number in range(0, 10):
-        for third_number in range(0, 10):
-            all_numbers.append((first_number, second_number, third_number))
+# Function to generate all combination and store validate combinations
+def validate_combinations():
+    for i in range(10):
+        for j in range(10):
+            for k in range(10):
+                if i <= j <= k and len(set(str(i) + str(j) + str(k))) == 3:
+                    valid_combinations = (str(i) + str(j) + str(k))
+                    print(valid_combinations)
 
-all_numbers
+# Call function to print valid combinations
+validate_combinations()
+
+
+
