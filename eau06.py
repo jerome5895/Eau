@@ -4,6 +4,9 @@ import sys
 def UP_lowcase():
     new_string = ""
     for n in range(len(string)):
+        if ord(string[n]) >= 48 and ord(string[n]) <= 57:
+            print("Invalid input. Please don't provide any integer.")
+            sys.exit()
         if n % 2 == 0:
             if ord(string[n]) >= 97:
                 new_string += chr(ord(string[n]) - 32)
@@ -13,7 +16,7 @@ def UP_lowcase():
             new_string += string[n]
     return new_string
 
-# Function to manage ValueErrors
+# Function to manage IndexErrors
 def try_except():
     try:
         string = sys.argv[1]
